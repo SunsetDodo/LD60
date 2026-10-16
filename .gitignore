@@ -113,3 +113,5 @@ LD60/Library/
 LD60/Temp/
 
 LD60/UserSettings/
+
+LD60/Packages/com.singularitygroup.hotreload/
