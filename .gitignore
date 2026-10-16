@@ -115,3 +115,7 @@ LD60/Temp/
 LD60/UserSettings/
 
 LD60/Packages/com.singularitygroup.hotreload/
+
+LD60/.idea/
+
+LD60/obj/
