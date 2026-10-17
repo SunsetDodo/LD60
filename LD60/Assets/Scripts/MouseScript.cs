@@ -35,13 +35,17 @@ public class MouseScript : MonoBehaviour
         }
         var buttonCollider = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("Buttons"));
         if (!buttonCollider) return;
-        Debug.Log(buttonCollider.gameObject.name);
         if (buttonCollider.gameObject == leftButton)  _player.Move(Vector2.left);
         if (buttonCollider.gameObject == rightButton)  _player.Move(Vector2.right);
             
         if (buttonCollider.gameObject == jumpButton && Input.GetMouseButtonDown(0))
         {
             _player.Jump();                
+        }
+        
+        if (buttonCollider.gameObject == attackButton && Input.GetMouseButtonDown(0))
+        {
+            _player.Attack();                
         }
     }
 }
