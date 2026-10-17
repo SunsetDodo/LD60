@@ -8,6 +8,14 @@ public class MouseScript : MonoBehaviour
 
     [SerializeField] private Vector2 horizontalBounds;
     [SerializeField] private Vector2 verticalBounds;
+
+    [SerializeField] private Sprite upSprite;
+    [SerializeField] private Sprite downSprite;
+    [SerializeField] private GameObject hand;
+    [SerializeField] private Vector3 pressOffset;
+
+    private SpriteRenderer _renderer;
+    private bool isPressed = false;
     
     [SerializeField] private GameObject leftButton;
     [SerializeField] private GameObject rightButton;
@@ -16,6 +24,11 @@ public class MouseScript : MonoBehaviour
     
     [SerializeField] private PlayerMovement _player;
 
+    private void Start()
+    {
+        _renderer = hand.GetComponent<SpriteRenderer>();
+    }
+    
     // Update is called once per frame
     void Update()
     {
@@ -31,8 +44,23 @@ public class MouseScript : MonoBehaviour
         if (!Input.GetMouseButton(0))
         {
             _player.Move(Vector2.zero);
+            if (isPressed)
+            {
+                isPressed = false;
+                _renderer.sprite = upSprite;
+                hand.transform.position += pressOffset;
+            }
+
             return;
         }
+        
+        if (!isPressed)
+        {
+            isPressed = true;
+            _renderer.sprite = downSprite;
+            hand.transform.position -= pressOffset;
+        }
+
         var buttonCollider = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("Buttons"));
         if (!buttonCollider) return;
         if (buttonCollider.gameObject == leftButton)  _player.Move(Vector2.left);
