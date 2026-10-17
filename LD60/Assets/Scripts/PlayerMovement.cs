@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     public void Move(Vector2 moveInput)
     {
         _charMove = moveInput;
+        Debug.Log(_charMove);
     }
 
     public void Jump()
