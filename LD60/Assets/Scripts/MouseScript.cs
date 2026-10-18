@@ -63,6 +63,7 @@ public class MouseScript : MonoBehaviour
 
         var buttonCollider = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("Buttons"));
         if (!buttonCollider) return;
+        buttonCollider.gameObject.GetComponent<ButtonPress>().isPressed = true;
         if (buttonCollider.gameObject == leftButton)  _player.Move(Vector2.left);
         if (buttonCollider.gameObject == rightButton)  _player.Move(Vector2.right);
             
