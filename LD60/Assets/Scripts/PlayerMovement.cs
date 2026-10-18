@@ -10,9 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
     
-    [SerializeField] private float upGravity = -10;
-    [SerializeField] private float downGravity = -20;
-    
     [SerializeField] private GameObject groundCheck;
     [SerializeField] private bool isGrounded;
     private bool _jumpRequested;
@@ -68,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
     public void Move(Vector2 moveInput)
     {
         _charMove = moveInput;
-        Debug.Log(_charMove);
     }
 
     public void Jump()

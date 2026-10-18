@@ -21,8 +21,10 @@ public class MouseScript : MonoBehaviour
     [SerializeField] private GameObject rightButton;
     [SerializeField] private GameObject jumpButton;
     [SerializeField] private GameObject attackButton;
+    [SerializeField] private GameObject powerButton;
     
-    [SerializeField] private PlayerMovement _player;
+    [SerializeField] private PlayerMovement player;
+    [SerializeField] private GameboyControl control;
 
     private void Start()
     {
@@ -43,7 +45,7 @@ public class MouseScript : MonoBehaviour
 
         if (!Input.GetMouseButton(0))
         {
-            _player.Move(Vector2.zero);
+            player.Move(Vector2.zero);
             if (isPressed)
             {
                 isPressed = false;
@@ -64,17 +66,22 @@ public class MouseScript : MonoBehaviour
         var buttonCollider = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("Buttons"));
         if (!buttonCollider) return;
         buttonCollider.gameObject.GetComponent<ButtonPress>().isPressed = true;
-        if (buttonCollider.gameObject == leftButton)  _player.Move(Vector2.left);
-        if (buttonCollider.gameObject == rightButton)  _player.Move(Vector2.right);
-            
+        if (buttonCollider.gameObject == leftButton)  player.Move(Vector2.left);
+        if (buttonCollider.gameObject == rightButton)  player.Move(Vector2.right);
+
+        if (buttonCollider.gameObject == powerButton && Input.GetMouseButtonDown(0))
+        {
+            control.PressPowerButton();
+        }
+
         if (buttonCollider.gameObject == jumpButton && Input.GetMouseButtonDown(0))
         {
-            _player.Jump();                
+            player.Jump();                
         }
         
         if (buttonCollider.gameObject == attackButton && Input.GetMouseButtonDown(0))
         {
-            _player.Attack();                
+            player.Attack();                
         }
     }
 }
