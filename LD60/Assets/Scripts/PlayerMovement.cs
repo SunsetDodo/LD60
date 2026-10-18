@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -9,9 +10,19 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
-    
+    [SerializeField] private float downPush = 0f;
+
+
+    [SerializeField] private GameObject hurtBox;
     [SerializeField] private GameObject groundCheck;
     [SerializeField] private bool isGrounded;
+    [SerializeField] private float deathTimer = 1f;
+
+    [SerializeField] private Sprite tombSprite;
+
+    private float currentDeathTimer = -1f;
+    
+    
     private bool _jumpRequested;
     private bool _attackRequested;
     
@@ -32,9 +43,26 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector2(1f, 0.01f), 0, LayerMask.GetMask("Floor"));
-        HandleMovement();
-        HandleAnimation();
+        if (currentDeathTimer == -1f)
+        {
+            isGrounded = Physics2D.OverlapBox(groundCheck.transform.position, new Vector2(1f, 0.01f), 0,
+                LayerMask.GetMask("Floor"));
+            HandleMovement();
+            HandleAnimation();
+        }
+        else if (currentDeathTimer > 0f)
+        {
+            currentDeathTimer -= Time.deltaTime;
+            _spriteRenderer.color = Color.Lerp(Color.red, Color.white, currentDeathTimer / deathTimer);
+        }
+        else
+        {
+            _animator.enabled = false;
+            _body.mass = 100000;
+            gameObject.layer = LayerMask.NameToLayer("Walls");
+            _spriteRenderer.color = Color.white;
+            _spriteRenderer.sprite = tombSprite;
+        }
     }
 
 
@@ -46,12 +74,25 @@ public class PlayerMovement : MonoBehaviour
             _body.linearVelocityY = jumpForce;
             _jumpRequested = false;
         }
+
+        if (!isGrounded && Math.Abs(_body.linearVelocityY) < 0.1f)
+        {
+            _body.AddForce(new Vector2(0, -downPush));
+        }
     }
 
     private void HandleAnimation()
     {
-        if (_charMove.x < 0 && !_spriteRenderer.flipX) _spriteRenderer.flipX = true;
-        if (_charMove.x > 0 && _spriteRenderer.flipX) _spriteRenderer.flipX = false;
+        if (_charMove.x < 0 && !_spriteRenderer.flipX)
+        {
+            _spriteRenderer.flipX = true;
+            hurtBox.transform.localPosition = new Vector2(-0.9f, hurtBox.transform.localPosition.y);
+        }
+        if (_charMove.x > 0 && _spriteRenderer.flipX)
+        {
+            _spriteRenderer.flipX = false;
+            hurtBox.transform.localPosition = new Vector2(0, hurtBox.transform.localPosition.y);
+        }
         _animator.SetFloat("Speed", Mathf.Abs(_charMove.x));
         _animator.SetBool("isGrounded", isGrounded);
         if (_attackRequested)
@@ -69,12 +110,31 @@ public class PlayerMovement : MonoBehaviour
 
     public void Jump()
     {
-        _jumpRequested = true;
+        if (isGrounded)
+        {
+            _jumpRequested = true;
+        }
     }
 
 
     public void Attack()
     {
         _attackRequested = true;
+    }
+
+
+
+    public void Die()
+    {
+        _animator.SetTrigger("Die");
+        currentDeathTimer = deathTimer;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && collision.gameObject.GetComponent<EnemyMovement>().isAlive() && currentDeathTimer == -1f)
+        {
+            Die();
+        }
     }
 }
