@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private GameObject wallCheck;
     [SerializeField] private Vector2 deathForce;
     [SerializeField] private float deathTime = 0.5f;
+    [SerializeField] private AudioClip[] deathSounds;
 
     private bool facingRight = false;
     
@@ -16,10 +17,12 @@ public class EnemyMovement : MonoBehaviour
     private CapsuleCollider2D _deathCollider;
     private SpriteRenderer _spriteRenderer;
     private float currentDeathTimer = -1f;
+    private AudioSource _audioSource;
     
     
     void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _body = GetComponent<Rigidbody2D>();
         _mainCollider = GetComponent<BoxCollider2D>();
         _deathCollider = GetComponent<CapsuleCollider2D>();
@@ -47,7 +50,8 @@ public class EnemyMovement : MonoBehaviour
             bool foundGround =
                 Physics2D.OverlapCircle(groundCheck.transform.position, 0.2f, LayerMask.GetMask("Floor"));
             bool foundWall = Physics2D.OverlapCircle(wallCheck.transform.position, 0.2f, LayerMask.GetMask("Walls")) ||
-                             Physics2D.OverlapCircle(wallCheck.transform.position, 0.2f, LayerMask.GetMask("Floor"));
+                             Physics2D.OverlapCircle(wallCheck.transform.position, 0.2f, LayerMask.GetMask("Floor"))    ||
+                             Physics2D.OverlapCircle(wallCheck.transform.position, 0.2f, LayerMask.GetMask("Enemy"));
 
             if (!foundGround || foundWall)
             {
@@ -78,6 +82,8 @@ public class EnemyMovement : MonoBehaviour
 
     public void Hit(bool fromLeft)
     {
+        _audioSource.clip = deathSounds[Random.Range(0, deathSounds.Length)];
+        _audioSource.Play();
         currentDeathTimer = deathTime;
         _body.mass = 0.1f;
         _mainCollider.enabled = false;

@@ -1,0 +1,806 @@
+fileFormatVersion: 2
+guid: 3fd3cc875c0af2f458ad8a51c88a869a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7244969634182585125
+    second: IfStuckOrDead_0
+  - first:
+      213: 7908409971372589159
+    second: IfStuckOrDead_1
+  - first:
+      213: 1958546512308391524
+    second: IfStuckOrDead_2
+  - first:
+      213: -6390305346299222882
+    second: IfStuckOrDead_3
+  - first:
+      213: -1648963620618299953
+    second: IfStuckOrDead_4
+  - first:
+      213: 6026628939867808925
+    second: IfStuckOrDead_5
+  - first:
+      213: -3060468669753530068
+    second: IfStuckOrDead_6
+  - first:
+      213: -6385578498165622204
+    second: IfStuckOrDead_7
+  - first:
+      213: -8352956150687683633
+    second: IfStuckOrDead_8
+  - first:
+      213: -927715205208542018
+    second: IfStuckOrDead_9
+  - first:
+      213: 5380167564755331734
+    second: IfStuckOrDead_10
+  - first:
+      213: 8589864036588478525
+    second: IfStuckOrDead_11
+  - first:
+      213: 1483576466519486244
+    second: IfStuckOrDead_12
+  - first:
+      213: 2606391378310888975
+    second: IfStuckOrDead_13
+  - first:
+      213: -8568543198843897304
+    second: IfStuckOrDead_14
+  - first:
+      213: 6909027035941694155
+    second: IfStuckOrDead_15
+  - first:
+      213: 231267874391498306
+    second: IfStuckOrDead_16
+  - first:
+      213: -1679393619775444450
+    second: IfStuckOrDead_17
+  - first:
+      213: 8832181124125103934
+    second: IfStuckOrDead_18
+  - first:
+      213: 8769884896492691508
+    second: IfStuckOrDead_19
+  - first:
+      213: -7828504672534410871
+    second: IfStuckOrDead_20
+  - first:
+      213: 6688406114660932177
+    second: IfStuckOrDead_21
+  - first:
+      213: 8667362513584982073
+    second: IfStuckOrDead_22
+  - first:
+      213: 9069349723258502330
+    second: IfStuckOrDead_23
+  - first:
+      213: 7799204415437503898
+    second: IfStuckOrDead_24
+  - first:
+      213: -2908375978794034258
+    second: IfStuckOrDead_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IfStuckOrDead_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 118
+        width: 8
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd42e02d082b47b90800000000000000
+      internalID: -7244969634182585125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 118
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76002d9e7f050cd60800000000000000
+      internalID: 7908409971372589159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 117
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ec8361da72e2b10800000000000000
+      internalID: 1958546512308391524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 117
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e942e8315231157a0800000000000000
+      internalID: -6390305346299222882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 117
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc51189d254bd19e0800000000000000
+      internalID: -1648963620618299953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_5
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 117
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d94e8e12713e2a350800000000000000
+      internalID: 6026628939867808925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_6
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 118
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c29e02db5f70785d0800000000000000
+      internalID: -3060468669753530068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_7
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 115
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44a377b203ed167a0800000000000000
+      internalID: -6385578498165622204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_8
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 118
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcba8d503a6541c80800000000000000
+      internalID: -8352956150687683633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_9
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 117
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb4f0d4afe71023f0800000000000000
+      internalID: -927715205208542018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_10
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 117
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ae15115e13aaa40800000000000000
+      internalID: 5380167564755331734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_11
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 117
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3062c984d3553770800000000000000
+      internalID: 8589864036588478525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_12
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 84
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42fe50c9fe8b69410800000000000000
+      internalID: 1483576466519486244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_13
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 83
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e7cd93623cb2420800000000000000
+      internalID: 2606391378310888975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_14
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 83
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82af156db5b661980800000000000000
+      internalID: -8568543198843897304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_15
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 83
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcaefdccb7bc1ef50800000000000000
+      internalID: 6909027035941694155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_16
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 83
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e901d08e0a53300800000000000000
+      internalID: 231267874391498306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_17
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 84
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a2a3f866891b8e0800000000000000
+      internalID: -1679393619775444450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_18
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 83
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e37136fffe5329a70800000000000000
+      internalID: 8832181124125103934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_19
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 83
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430a28839d3e4b970800000000000000
+      internalID: 8769884896492691508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_20
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 83
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989c91f3a709b5390800000000000000
+      internalID: -7828504672534410871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_21
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 84
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a5ae1bcedf1dc50800000000000000
+      internalID: 6688406114660932177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_22
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 83
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93805c1d848a84870800000000000000
+      internalID: 8667362513584982073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_23
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 83
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc3c96958dccdd70800000000000000
+      internalID: 9069349723258502330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_24
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 83
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d7fc808175c3c60800000000000000
+      internalID: 7799204415437503898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IfStuckOrDead_25
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 83
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eabd3bed47f53a7d0800000000000000
+      internalID: -2908375978794034258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IfStuckOrDead_0: -7244969634182585125
+      IfStuckOrDead_1: 7908409971372589159
+      IfStuckOrDead_10: 5380167564755331734
+      IfStuckOrDead_11: 8589864036588478525
+      IfStuckOrDead_12: 1483576466519486244
+      IfStuckOrDead_13: 2606391378310888975
+      IfStuckOrDead_14: -8568543198843897304
+      IfStuckOrDead_15: 6909027035941694155
+      IfStuckOrDead_16: 231267874391498306
+      IfStuckOrDead_17: -1679393619775444450
+      IfStuckOrDead_18: 8832181124125103934
+      IfStuckOrDead_19: 8769884896492691508
+      IfStuckOrDead_2: 1958546512308391524
+      IfStuckOrDead_20: -7828504672534410871
+      IfStuckOrDead_21: 6688406114660932177
+      IfStuckOrDead_22: 8667362513584982073
+      IfStuckOrDead_23: 9069349723258502330
+      IfStuckOrDead_24: 7799204415437503898
+      IfStuckOrDead_25: -2908375978794034258
+      IfStuckOrDead_3: -6390305346299222882
+      IfStuckOrDead_4: -1648963620618299953
+      IfStuckOrDead_5: 6026628939867808925
+      IfStuckOrDead_6: -3060468669753530068
+      IfStuckOrDead_7: -6385578498165622204
+      IfStuckOrDead_8: -8352956150687683633
+      IfStuckOrDead_9: -927715205208542018
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

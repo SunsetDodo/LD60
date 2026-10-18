@@ -15,6 +15,7 @@ public class MouseScript : MonoBehaviour
     [SerializeField] private Vector3 pressOffset;
 
     private SpriteRenderer _renderer;
+    private AudioSource _audioSource;
     private bool isPressed = false;
     
     [SerializeField] private GameObject leftButton;
@@ -29,6 +30,7 @@ public class MouseScript : MonoBehaviour
     private void Start()
     {
         _renderer = hand.GetComponent<SpriteRenderer>();
+        _audioSource = GetComponent<AudioSource>();
     }
     
     // Update is called once per frame
@@ -42,10 +44,13 @@ public class MouseScript : MonoBehaviour
         newPos.y = Mathf.Clamp(newPos.y, verticalBounds.x, verticalBounds.y);
         transform.position = newPos;
 
+        var playerGameObject = GameObject.FindWithTag("Player");
+        if (playerGameObject) player = playerGameObject.GetComponent<PlayerMovement>();
+            
 
         if (!Input.GetMouseButton(0))
         {
-            player.Move(Vector2.zero);
+            if (player) player.Move(Vector2.zero);
             if (isPressed)
             {
                 isPressed = false;
@@ -65,23 +70,33 @@ public class MouseScript : MonoBehaviour
 
         var buttonCollider = Physics2D.OverlapPoint(transform.position, LayerMask.GetMask("Buttons"));
         if (!buttonCollider) return;
+        if (!_audioSource.isPlaying && Input.GetMouseButtonDown(0) ) _audioSource.Play();
         buttonCollider.gameObject.GetComponent<ButtonPress>().isPressed = true;
-        if (buttonCollider.gameObject == leftButton)  player.Move(Vector2.left);
-        if (buttonCollider.gameObject == rightButton)  player.Move(Vector2.right);
+        if (buttonCollider.gameObject == leftButton && player)  player.Move(Vector2.left);
+        if (buttonCollider.gameObject == rightButton && player)  player.Move(Vector2.right);
 
         if (buttonCollider.gameObject == powerButton && Input.GetMouseButtonDown(0))
         {
             control.PressPowerButton();
         }
 
-        if (buttonCollider.gameObject == jumpButton && Input.GetMouseButtonDown(0))
+        if (buttonCollider.gameObject == jumpButton && player && Input.GetMouseButtonDown(0))
         {
             player.Jump();                
         }
         
         if (buttonCollider.gameObject == attackButton && Input.GetMouseButtonDown(0))
         {
-            player.Attack();                
+            Debug.Log("Pressed A");
+            if (control.started && player)
+            {
+                player.Attack();
+            }
+            else
+            {
+                Debug.Log("Here");
+                control.StartGame();
+            }
         }
     }
 }

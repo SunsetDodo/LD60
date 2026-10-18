@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
@@ -19,6 +20,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float deathTimer = 1f;
 
     [SerializeField] private Sprite tombSprite;
+    
+    [SerializeField] private AudioClip[] jumpSounds;
+    [SerializeField] private AudioClip[] hitSounds;
+    [SerializeField] private AudioClip[] deathSounds;
+
+    public GameboyControl control;
 
     private float currentDeathTimer = -1f;
     
@@ -32,10 +39,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D _body;
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
+    private AudioSource _audioSource;
     
     
     private void Start()
     {
+        _audioSource = GetComponent<AudioSource>();
         _body = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _animator = GetComponentInChildren<Animator>();
@@ -71,6 +80,8 @@ public class PlayerMovement : MonoBehaviour
         _body.linearVelocityX = _charMove.x * movementSpeed;
         if (_jumpRequested && isGrounded)
         {
+            _audioSource.clip = jumpSounds[Random.Range(0, jumpSounds.Length)];
+            _audioSource.Play();
             _body.linearVelocityY = jumpForce;
             _jumpRequested = false;
         }
@@ -98,6 +109,8 @@ public class PlayerMovement : MonoBehaviour
         if (_attackRequested)
         {
             _animator.SetTrigger("Attack");
+            _audioSource.clip = hitSounds[Random.Range(0, hitSounds.Length)];
+            _audioSource.Play();
             _attackRequested = false;
         }
 
@@ -127,6 +140,8 @@ public class PlayerMovement : MonoBehaviour
     public void Die()
     {
         _animator.SetTrigger("Die");
+        _audioSource.clip = deathSounds[Random.Range(0, deathSounds.Length)];
+        _audioSource.Play();
         currentDeathTimer = deathTimer;
     }
 
@@ -135,6 +150,15 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && collision.gameObject.GetComponent<EnemyMovement>().isAlive() && currentDeathTimer == -1f)
         {
             Die();
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Finish"))
+        {
+            control.WinGame();
         }
     }
 }
